@@ -1,0 +1,30 @@
+<% include  ./partials/header%> 
+<div class="applications">
+<div class='container'>
+        <h1 class="animated shake">VEHICLE LICENSE RESULTS</h1>
+    <table class='table table-striped table-bordered'>
+        <thead>
+        <tr>
+        <th>Applicant Name</th>
+        <th>Application Type</th>
+        <th>Test Scores</th>
+        <th>State of Application</th>
+        <th>Application Status</th>
+        </tr>
+        <tbody>
+            <%applications.forEach(a=>{%>
+                <tr>
+                <td><%=a.user.firstName%> <%=a.user.lastName%></td>
+                <td><%=a.applicationType%></td>
+                <td><%=a.scores%></td>
+                <td><%=a.state%></td>
+                <td><%=a.status%></td>
+                </tr>
+             <%})%>
+        </tbody>
+        </thead>
+    </table>
+    
+</div>
+</div>
+<% include  ./partials/footer%> 
